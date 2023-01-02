@@ -1,0 +1,41 @@
+.gameInterMain {
+    display: flex;
+    align-items: stretch;
+    justify-content:center;
+
+    height: 900px;
+}
+
+.gameInterQuestAns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+
+    padding-left: 80px;
+    padding-top: 133px;
+    padding-bottom: 122px;
+    padding-right: 140px;
+    
+}
+
+.gameInterQuest {
+    display: flex;
+    align-items: left;
+    justify-content:center;
+    text-align: left;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 116%;
+    color: #1C1C21;
+}
+
+.gameInterReward {
+    max-width: 376px;
+    background-color: #FFFFFF;
+    padding: 166px 0;
+}

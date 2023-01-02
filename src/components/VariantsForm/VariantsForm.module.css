@@ -1,0 +1,11 @@
+.varFormMain {
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    
+}
+
+.varButP {
+    padding-right: 10px;
+}

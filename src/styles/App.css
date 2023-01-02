@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("../assets/fonts/Inter.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: #E5E5E5;
+}
+
+.App {
+  position: relative;
+  text-align: center;
+  background-color: #F5F5F7;
+  width: 100%;
+  max-width: 1440px;
+
+  min-height: 900px;
+
+  margin: 0 auto;
+}
+
+.gameForm-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.gameForm-info {
+  margin-left: 60px;
+  width: 624px;
+}
+
+.gameForm-img {
+  max-width: 624px;
+}
+
+.gameForm-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 116%;
+  color: #1C1C21;
+}
+
+.modalEnd-title {
+  color: #1C1C21;
+  opacity: 0.5;
+  font-size: 32px;
+}
