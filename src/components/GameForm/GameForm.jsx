@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '../UI/Button/Button';
+import { Link } from 'react-router-dom'
+
 
 const GameForm = ({children, img, close, title, buttonText}) => (
     <div className='gameForm-main'>
@@ -9,8 +11,9 @@ const GameForm = ({children, img, close, title, buttonText}) => (
             {children}
 
             <p>{title}</p>
-
-            <Button onClick={close}>{buttonText}</Button>
+            <Link to={close}>
+                <Button className="myBtn">{buttonText}</Button>
+            </Link>
         </div>
     </div>
 );

@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles/App.css';
 import ImgHand from "./assets/images/hand.png";
-import Modal from './components/UI/Modal/Modal';
-import GameForm from './components/GameForm/GameForm';
-import GameInterface from './components/GameInterface/GameInterface';
+
+import { Routes, Route} from 'react-router-dom'
+
+import StartPage from './pages/StartPage';
+import GamePage from './pages/GamePage';
+import EndPage from './pages/EndPage';
 
 function App() {
+
+  const pathStart = "/";
+  const pathGame = "/game";
+  const pathEnd = "/end";
 
   const dataQuiz = [
     {
@@ -46,7 +53,6 @@ function App() {
     ]}
   ];
 
-  // const dataReward = [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
   const dataReward = [
     {
       icon: "$",
@@ -98,34 +104,13 @@ function App() {
     }
   ];
 
-  const [modalStart, setModalStart] = useState(true);
-  const [modalEnd, setModalEnd] = useState(false);
-
-  const closeModalStart = () => {
-    setModalStart(false);
-  }
-
-  const closeModalEnd = () => {
-    setModalEnd(false);
-  }
-
-  const openModalEnd = () => {
-    setModalEnd(true);
-  }
-
   return (
     <div className="App">
-      <Modal visible={modalStart}>
-        <GameForm close={closeModalStart} img={ImgHand} title={'Who wants to be a millionaire?'} buttonText={'Start'}/>
-      </Modal>
-
-      <GameInterface questionText={dataQuiz} endGame={openModalEnd} reward={dataReward.reverse()}/>
-
-      <Modal visible={modalEnd} setEnd={true} style={{background: 'red'}}>
-        <GameForm close={closeModalEnd} setEnd={true} img={ImgHand} title={'$8,000 earned'} buttonText={'Try again'}>
-          <div className='modalEnd-title'>Total score:</div>
-        </GameForm>
-      </Modal>
+      <Routes>
+        <Route path="/" element={<StartPage pathToGame={pathGame} ImgHand={ImgHand} classCSS="myModal" />} />
+        <Route path="/game" element={<GamePage pathToGame={pathEnd} dataQuiz={dataQuiz} rewardData={dataReward.reverse()} />} />
+        <Route path="/end" element={<EndPage pathToGame={pathStart} ImgHand={ImgHand} classCSS="myModalEnd" />} />
+      </Routes>
     </div>
   );
 }

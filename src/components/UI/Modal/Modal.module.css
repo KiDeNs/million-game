@@ -1,18 +1,15 @@
-.myModal {
+.myModal, .myModalEnd {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
 
-
     background: linear-gradient(148deg, #FFFFFF 50%, #FFF3EB 50%);
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* display: none; */
 
 }
 
@@ -22,10 +19,6 @@
     justify-content: center;
 }
 
-.myModal.noActive {
-    display: none;
-}
-
-.myModal.end {
+.myModalEnd {
     background: #F5F5F7;
 }

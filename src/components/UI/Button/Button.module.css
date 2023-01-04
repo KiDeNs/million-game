@@ -26,3 +26,42 @@
 .myBtn:focus {
     background: #E87928;
 }
+
+
+
+
+.myAnsBtn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    width: 420px;
+    padding: 25px 32px;
+
+    cursor: pointer;
+    border: 1px solid #D0D0D8;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 116%;
+    color: #1C1C21;
+    background-color: #FFFFFF;
+}
+
+.myAnsBtn p {
+    color: #FF8B37;
+    font-weight: bold;
+}
+
+.myAnsBtn:hover {
+    background: #FFF3EB;
+    border: 1px solid #FF8B37;
+}
+
+.myAnsBtn:focus {
+    background: #FDEEED;
+    border: 1px solid #EC6259;
+}

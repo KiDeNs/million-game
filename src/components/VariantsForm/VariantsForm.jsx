@@ -1,32 +1,35 @@
 import React from 'react';
-import ButtonAnswer from '../UI/ButtonAnswer/ButtonAnswer';
+import Button from '../UI/Button/Button';
 import classes from './VariantsForm.module.css';
+import { Link } from 'react-router-dom'
 
-const VariantsForm = ({closeGameClick}) => (
+const VariantsForm = ({pathToPage}) => (
     <div className={classes.varFormMain}>
-        <ButtonAnswer onClick={closeGameClick}>
+        <Link to={pathToPage} className={classes.varFormLink}>
+            <Button className="myAnsBtn">
+                <p className={classes.varButP}>A</p>
+
+                10 years
+            </Button>
+        </Link>
+
+        <Button className="myAnsBtn">
             <p className={classes.varButP}>A</p>
 
             10 years
-        </ButtonAnswer>
+        </Button>
 
-        <ButtonAnswer >
+        <Button className="myAnsBtn">
             <p className={classes.varButP}>A</p>
 
             10 years
-        </ButtonAnswer>
+        </Button>
 
-        <ButtonAnswer>
-            <p className={classes.varButP}>A</p>
-
-            10 years
-        </ButtonAnswer>
-
-        <ButtonAnswer>
+        <Button className="myAnsBtn">
             <p className={classes.varButP}>A</p>
             
             10 years
-        </ButtonAnswer>
+        </Button>
     </div>
 );
 
