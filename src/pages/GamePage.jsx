@@ -3,7 +3,7 @@ import GameInterface from '../components/GameInterface/GameInterface';
 
 const GamePage = ({dataQuiz, rewardData, pathToGame}) => (
     <div>
-      <GameInterface questionText={dataQuiz} reward={rewardData} pathToEnd={pathToGame}/>
+      <GameInterface dataQuiz={dataQuiz} rewardData={rewardData} pathToGame={pathToGame}/>
     </div>
   );
 

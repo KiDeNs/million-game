@@ -1,17 +1,18 @@
 import React from 'react';
 import Button from '../UI/Button/Button';
+import classes from './GameForm.module.css';
 import { Link } from 'react-router-dom'
 
 
-const GameForm = ({children, img, close, title, buttonText}) => (
+const GameForm = ({children, ImgHand, pathToGame, title, buttonText}) => (
     <div className='gameForm-main'>
-        <img className='gameForm-img' src={img} alt="form-img"/>
+        <img className='gameForm-img' src={ImgHand} alt="form-img"/>
 
         <div className='gameForm-info'>
             {children}
 
             <p>{title}</p>
-            <Link to={close}>
+            <Link to={pathToGame} className={classes.link}>
                 <Button className="myBtn">{buttonText}</Button>
             </Link>
         </div>

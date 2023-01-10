@@ -4,7 +4,7 @@ import classes from './RewardForm.module.css';
 
 const RewardForm = ({rewardList}) => (
     <div className={classes.revFormMain}>
-        {rewardList.map((item) => (
+        {rewardList.reverse().map((item) => (
             <TextReward>
                 {item.icon}
                 

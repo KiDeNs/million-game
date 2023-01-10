@@ -1,8 +1,6 @@
 .myBtn {
     padding: 20px 24px;
-
     width: 296px;
-
     background: #FF8B37;
     border-radius: 12px;
     border: #FF8B37;
@@ -15,7 +13,7 @@
     font-size: 20px;
     line-height: 116%;
     color: #FFFFFF;
-
+    text-align: center;
     margin-top: 65px;
 }
 
